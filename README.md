@@ -1,5 +1,5 @@
-parseEnv
-========
+Configulator
+============
 
 Handles building a config object based on the environment in which the program is running and allows you to override
 config properties by passing arguments over the command line.
@@ -30,7 +30,7 @@ config.js
 /*jshint node: true*/
 'use strict';
 
-exports.wiretree = function configModule(parseEnv) {
+exports.wiretree = function configModule(configulator) {
   var config = {
     default: {
       status: {
@@ -60,21 +60,21 @@ exports.wiretree = function configModule(parseEnv) {
     }
   };
 
-  return parseEnv(config);
+  return configulator(config);
 };
 ```
 
 
-Note that in the above example I am using wiretree to inject parseEnv. You could require it as a dependency if you choose, but I recommend using a dependency injection framework, such as wiretree. It's simple to setup. Just update your tree as follows:
+Note that in the above example I am using wiretree to inject configulator. You could require it as a dependency if you choose, but I recommend using a dependency injection framework, such as wiretree. It's simple to setup. Just update your tree as follows:
 
 ```javascript
 var Wiretree = require('wiretree');
 var wireTree = new Wiretree(__dirname);
-var parseEnv = require('parseEnv');
-wireTree.add(parseEnv, 'parseEnv');
+var configulator = require('configulator');
+wireTree.add(configulator, 'configulator');
 ```
 
-In the example above, if you set NODE_ENV to be *development*, it will overwrite the port to be 8000 instead of 8888. 
+In the example above, if you set NODE_ENV to be *development*, it will overwrite the port to be 8000 instead of 8888.
 
 Overwriting values using arguments
 =========================

@@ -1,5 +1,5 @@
 {
-  "name": "parseEnv",
+  "name": "configulator",
   "version": "0.0.0",
   "description": "Handles building a config object based on the environment in which the program is running and allows you to override config properties by passing arguments over the command line.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/krusty-krab/parseEnv.git"
+    "url": "https://github.com/krusty-krab/configulator.git"
   },
   "keywords": [
     "environment",
@@ -18,9 +18,9 @@
   "author": "Will Johnson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/krusty-krab/parseEnv/issues"
+    "url": "https://github.com/krusty-krab/configulator/issues"
   },
-  "homepage": "https://github.com/krusty-krab/parseEnv",
+  "homepage": "https://github.com/krusty-krab/configulator",
   "contributors": [
     {
       "name": "Will Johnson",
@@ -56,7 +56,7 @@
     }
   ],
   "dependencies": {
-    "lodash.merge": "^2.4.1",
-    "yargs": "^1.2.6"
+    "lodash.merge": "2.4.1",
+    "yargs": "1.2.6"
   }
 }
