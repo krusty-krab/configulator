@@ -1,6 +1,6 @@
 {
   "name": "configulator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Handles building a config object based on the environment in which the program is running and allows you to override config properties by passing arguments over the command line.",
   "main": "index.js",
   "scripts": {
@@ -56,7 +56,7 @@
     }
   ],
   "dependencies": {
-    "lodash.merge": "2.4.1",
+    "lodash": "2.4.1",
     "yargs": "1.2.6"
   }
 }
